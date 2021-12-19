@@ -1,0 +1,13 @@
+body {
+  background-color: #1d1d1d;
+}
+* {
+  text-align: center;
+  font-family: Arial;
+}
+.page-title {
+  /* title with red glowing shadow */
+  font-size: 3em;
+  color: #D03E3C;
+  text-shadow: 0 0 4px #D03E3C;
+}
