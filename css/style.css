@@ -50,3 +50,12 @@ li {
 .social:hover {
   filter: invert(80%);
 }
+.features {
+  font-size: 18px;
+}
+.changelog {
+  font-size: 18px;
+  color: #d8d8d8;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
