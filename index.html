@@ -22,14 +22,18 @@
       let data = fetch('https://api.github.com/repos/WatchTubeApp/WatchTube/releases/latest');
       data = data.then(data => data.json());
       data.then(data => {
-        console.log(data)
-        document.getElementById("version-shout").innerHTML = `${data.tag_name} out now!`;
-        let string = ""
-        let desc = data.body.split("\r\n");
-        desc.forEach(line => {
-          string = `${string}<p class="changelog">${line}</p>`;
-        });
-        document.getElementById("changelog").innerHTML = document.getElementById("changelog").innerHTML+string
+        if (data.message) {
+          document.getElementById("version-shout").innerHTML = `GitHub API Unavailable`;
+          document.getElementById("changelog").innerHTML = `<h3>We can't get you any details because GitHub won't let you.\nYou can still check out WatchTube below!</h3>`
+        } else {
+          document.getElementById("version-shout").innerHTML = `${data.tag_name} out now!`;
+          let string = ""
+          let desc = data.body.split("\r\n");
+          desc.forEach(line => {
+            string = `${string}<p class="changelog">${line}</p>`;
+          });
+          document.getElementById("changelog").innerHTML = document.getElementById("changelog").innerHTML+string
+        }
       });
     </script>
     <div id="changelog" class="changelog">
