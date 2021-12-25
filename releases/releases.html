@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WatchTube</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="src/WatchTubeDark.png" type="image/x-icon">
+    <!-- discord embed meta -->
+    <meta property="og:title" content="WatchTube">
+    <meta property="og:description" content="YouTube for Apple Watch">
+    <meta property="og:image" content="https://watchtubeapp.github.io/src/WatchTubeDark.png">
+    <meta property="theme-color" content="#D03E3C">
+    <meta property="og:url" content="https://watchtubeapp.github.io">
+  </head>
+  <body>
+    <h1 class="page-title" onclick="window.location.href = 'https://watchtubeapp.github.io'">WatchTube</h1>
+    <p>Older versions</p>
+    <br>
+
+    <script>
+      (async()=>{
+        let string = "";
+        let tags = await fetch('https://api.github.com/repos/WatchTubeApp/WatchTube/tags');
+        tags = await tags.json();
+        if (tags.message) {
+          document.getElementById("stuff").innerHTML = `
+          <h2 style="color: #d8d8d8; font-size: 26px;">Error</h2>
+          <p>${tags.message}</p>
+          `;
+        }
+        for (let tag of tags) {
+          if (tags.indexOf(tag) == 0) {
+            continue;
+          }
+          string = `${string}<h2 style="color: #d8d8d8; font-size: 26px;">${tag.name}</h2>`;
+          let desc = await fetch('https://api.github.com/repos/WatchTubeApp/WatchTube/releases/tags/'+tag.name);
+          desc = await desc.json();
+          string = `${string}<div class="changelog">`
+          let lines = desc.body.split("\r\n");
+          lines.forEach(line => {
+            string = `${string}<p class="changelog">${line}</p>`;
+          });
+          string = `${string}<p>Download it <a href="https://github.com/WatchTubeApp/WatchTube/releases/tags/${tag.name}" class="link">here</a></p>`;
+          string = `${string}</div>`;
+          string = `${string}<br>`;
+        }
+        console.log(string)
+        document.getElementById("stuff").innerHTML = document.getElementById("stuff").innerHTML+string;
+      })();
+    </script>
+    <div id="stuff">
+    </div>
+    <footer>
+      <a href="https://github.com/WatchTubeApp/WatchTube" title="GitHub"><img src="src/github.svg" alt="github" class="social"></a>
+      <a href="https://discord.gg/6RJtAWp9wJ" title="Discord Server"><img src="src/discord.svg" alt="discord" class="social"></a>
+      <a href="https://twitter.com/WatchTubeTeam" title="Twitter"><img src="src/twitter.svg" alt="twitter" class="social"></a>
+    </footer>
+  </body>
+</html>

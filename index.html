@@ -8,24 +8,38 @@
     <link rel="icon" href="src/WatchTubeDark.png" type="image/x-icon">
     <!-- discord embed meta -->
     <meta property="og:title" content="WatchTube">
-    <meta property="og:description" content="WatchTube: YouTube for Apple Watch">
+    <meta property="og:description" content="YouTube for Apple Watch">
     <meta property="og:image" content="https://watchtubeapp.github.io/src/WatchTubeDark.png">
     <meta property="theme-color" content="#D03E3C">
     <meta property="og:url" content="https://watchtubeapp.github.io">
   </head>
   <body>
-    <h1 class="page-title">WatchTube</h1>
+    <h1 class="page-title" onclick="window.location.href = 'https://watchtubeapp.github.io'">WatchTube</h1>
     <p>YouTube on your wrist.</p>
     <br>
-    <h2 style="color: #d8d8d8; font-size: 26px;">v1.0.2 out now!</h2>
-    <div class="changelog">
-      <li class="changelog">New Now Playing UI design.</li>
-      <li class="changelog">Bug fixes</li>
+    <h2 id="version-shout" style="color: #d8d8d8; font-size: 26px;"></h2>
+    <script>
+      let data = fetch('https://api.github.com/repos/WatchTubeApp/WatchTube/releases/latest');
+      data = data.then(data => data.json());
+      data.then(data => {
+        console.log(data)
+        document.getElementById("version-shout").innerHTML = `${data.tag_name} out now!`;
+        let string = ""
+        let desc = data.body.split("\r\n");
+        desc.forEach(line => {
+          string = `${string}<p class="changelog">${line}</p>`;
+        });
+        document.getElementById("changelog").innerHTML = document.getElementById("changelog").innerHTML+string
+      });
+    </script>
+    <div id="changelog" class="changelog">
     </div>
-    <p>Download it <a href="https://github.com/WatchTubeApp/WatchTube/releases" class="link">here</a></p>
-    <br>
+    <p>Download it <a href="https://github.com/WatchTubeApp/WatchTube/releases/latest" class="link">here</a></p>
+    <p>
+      <a href="https://watchtubeapp.github.io/releases" class="link">Older Versions</a>
+    </p>
     <div class="features">
-      <h2>Features:</h2>
+      <h2>Features</h2>
       <li style="font-size: inherit;">Search and watch videos</li>
       <li style="font-size: inherit;">View info like views, likes and description</li>
       <li style="font-size: inherit;">Trending page</li>
@@ -33,10 +47,10 @@
       <li style="font-size: inherit;">Content caching</li>
       <p>Everything can be done on your Apple Watch, standalone with a YouTube-like UI</p>
     </div>
-    <div class="footer">
+    <footer
       <a href="https://github.com/WatchTubeApp/WatchTube" title="GitHub"><img src="src/github.svg" alt="github" class="social"></a>
       <a href="https://discord.gg/6RJtAWp9wJ" title="Discord Server"><img src="src/discord.svg" alt="discord" class="social"></a>
       <a href="https://twitter.com/WatchTubeTeam" title="Twitter"><img src="src/twitter.svg" alt="twitter" class="social"></a>
-    </div>
+    </footer>
   </body>
 </html>
