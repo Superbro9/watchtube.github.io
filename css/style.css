@@ -8,11 +8,14 @@ body {
 }
 .page-title {
   /* title with red glowing shadow */
-  font-size: 3em;
+  font-size: 1.5em;
   color: #D03E3C;
   text-shadow: 0 0 5px #D03E3C;
   margin-bottom: 2px;
   transition: ease-in-out 0.4s;
+}
+.page-title:hover {
+  text-shadow: 0 0 40px #D03E3C, 0 0 40px #d03e3ce2;
 }
 p {
   margin-top: 15px;
@@ -46,10 +49,10 @@ li {
   filter: invert(40%);
   margin-left: 10px;
   margin-right: 10px;
-  transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.3s;
 }
 .social:hover {
-  filter: invert(80%);
+  filter: invert(100%);
 }
 .features {
   font-size: 18px;
@@ -59,8 +62,4 @@ li {
   color: #d8d8d8;
   margin-top: 2px;
   margin-bottom: 2px;
-}
-
-.page-title:hover {
-  text-shadow: 0 0 40px #D03E3C, 0 0 40px #d03e3ce2;
 }
