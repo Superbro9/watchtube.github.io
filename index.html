@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Watchtube</title>
+        <title>WatchTube</title>
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -25,7 +25,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="#" style="color: #f74d4d;">
                     <img src="./Assets/Images/WatchTube.svg" alt="" width="30" height="30" class="d-inline-block align-text-top" />
-                    Watchtube
+                    WatchTube
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -57,7 +57,7 @@
         <div class="px-4 pt-5 my-5 text-center">
             <h1 class="display-4 fw-bold">What is it?</h1>
             <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">WatchTube is an app for Apple Watch that lets you watch YouTube on your wrist! Watchtube is currently in beta and is being constantly updated with new features.</p>
+                <p class="lead mb-4">WatchTube is an app for Apple Watch that lets you watch YouTube on your wrist! WatchTube is currently in beta and is being constantly updated with new features.</p>
             </div>
         </div>
 
@@ -68,11 +68,11 @@
                 <h2>Download</h2>
             </div>
             <div class="container text-center my-5">
-                <h3>Testflight</h3>
+                <h3 id="versions-title">Testflight</h3>
                 <br />
                 <br />
 
-                <div class="row download">
+                <div id="versions" class="row download">
                     <div class="col-md-4">
                         <h3>1.1.10</h3>
                         <p class="h6">
@@ -84,12 +84,10 @@
                     </div>
                     <article class="col-md-8">
                         <ul class="text-left">
-                            <li>Added a loading bar to the Now Playing UI</li>
+                            <li>We couldn't connect to GitHub</li>
+                            <li>GitHub did not return any release notes</li>
+                            <li>Try again later!</li>
                         </ul>
-
-                        <p class="mt-4 d-block d-md-none small text-center">
-                            <a href="/releases/">Older Releases</a>
-                        </p>
                     </article>
                 </div>
 
@@ -99,6 +97,12 @@
                     </svg>
                     Download with Testflight
                 </a>
+                <a href="" onclick="alert('Slow down! We didn\'t get WatchTube on the App Store yet!')" class="btn btn-primary btn-download mb-1">
+                  <svg class="mr-1 icon icon-spaced icon-download" viewBox="0 0 81 81">
+                    <path d="m40.7285 80.63867c21.8262 0 39.8926-18.06637 39.8926-39.89257 0-21.7773-18.1152-39.8926-39.9414-39.8926s-39.84376 18.1153-39.84376 39.8926c0 21.8262 18.06636 39.89257 39.89256 39.89257zm0-18.26167c-1.2207 0-2.1973-.4395-3.2715-1.5137l-13.5254-13.7695c-.7324-.7813-1.0742-1.6114-1.0742-2.7344 0-2.1485 1.5625-3.7598 3.711-3.7598 1.123 0 2.1484.4883 2.7832 1.1719l4.1504 4.4433 3.5644 4.5899-.3906-9.1309v-18.5058c0-2.295 1.709-3.9063 4.0527-3.9063 2.2949 0 4.0527 1.6113 4.0527 3.9063v18.5058l-.4394 9.1309 3.6133-4.6387 4.1504-4.3945c.6836-.6836 1.6601-1.1719 2.7832-1.1719 2.1484 0 3.7597 1.6113 3.7597 3.7598 0 1.123-.4394 1.9531-1.123 2.7344l-13.5254 13.7695c-.9766 1.0254-2.002 1.5137-3.2715 1.5137z"></path>
+                  </svg>
+                  Download from App Store
+              </a>
             </div>
         </section>
 
@@ -113,5 +117,6 @@
 		</footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    </body>
+        <script src="/Assets/js/home.js"></script>
+      </body>
 </html>
