@@ -6,7 +6,11 @@
              "components": [
                {
                   "/": "/flicktype/*",
-                  "comment": "flicktype support"
+                  "comment": "FlickType support"
+               },
+	       {
+                  "/": "/watch/*",
+                  "comment": "WatchTubeKit"
                }
              ]
            }
