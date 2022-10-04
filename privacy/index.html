@@ -1,93 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="WatchTube" content="app-id=com.suuperbro.WatchTube, app-argument=https://apps.apple.com/us/app/watchtube/id1599884909">
-        <title>WatchTube</title>
-        <!--Discord Embed-->
-        <meta content="Watchtube" property="og:title" />
-        <meta content="The Offical Website For WatchTube. Youtube For The iWatch!" property="og:description" />
-        <meta content="https://watchtubeteam.github.io/" property="og:url" />
-        <meta content="https://raw.githubusercontent.com/WatchTubeTeam/watchtubeteam.github.io/main/android-chrome-192x192.png" property="og:image" />
-        <meta content="#43B581" data-react-helmet="true" name="theme-color" />
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
 
-        <!-- Meta -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta name="WatchTube"
+        content="app-id=com.suuperbro.WatchTube, app-argument=https://apps.apple.com/us/app/watchtube/id1599884909">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WatchTube</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/27e1cf9693.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="128x128" href="/assets/WatchTube128.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/WatchTube64.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="/assets/WatchTube128.png">
+    <link rel="icon" href="favicon.ico" />
+</head>
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="/style.css" />
-
-        <!-- Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-    </head>
-
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #222223;">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#" style="color: #f74d4d;">
-                    <img src="/Assets/Images/WatchTube.svg" alt="" width="30" height="30" class="d-inline-block align-text-top" />
-                    WatchTube
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/releases/">Releases</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="/privacy/">Privacy Policy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <br /> <br /> <br /> <br /> <br /> 
-
-        <div class="px-4 py-5 my-5 text-center">
-            <h1 class="display-5 fw-bold"><span class="logo">Privacy</span></h1>
-            <div class="col-lg-6 mx-auto">
-              <p class="lead mb-4">We do not collect any data.</p>
-              <p style="font-size: medium;" class="lead mb-4">Scroll down for more</p>
-              
-            </div>
+<body>
+    <div class="nav">
+        <div>
+            <a href="/"><img src="/assets/WatchTube.svg" alt="WatchTube Logo"></a>
         </div>
-
-        <br /> <br /> <br /> <br /> 
-
-        <div class="px-4 pt-5 my-5 text-center">
-            <h1 class="display-4 fw-bold">Really?</h1>
-            <div class="col-lg-6 mx-auto">
-              <p class="lead mb-4">Yep! Our app doesn't collect any user data at all!</p>
-              <p class="lead mb-4">We do not gather data because it is not needed. We rely on users to tell us everything we need and bug reports must be manually sent to us, either through our <a href="https://discord.gg/6RJtAWp9wJ" style="text-decoration: underline; color: #f74d4d;">community Discord server</a>, or our <a href="https://twitter.com/WatchTubeTeam" style="text-decoration: underline; color: #f74d4d;">Twitter account</a>.</p
-              <p class="lead mb-4">We are not responsible for anything that goes wrong if you use a non-recommended instance.</p>
-              <p class="lead mb-4">We recommend only using the instances listed in WatchTube as they're trusted by Invidious, but you can press and hold the instance picker to choose a custom instance to use.</p>
-	      <p class="lead mb-4">We host our own Invidious Instances to ensure the best experiecne when using WatchTube!</p>
-            </div>
+        <div class="nav-shortcuts">
+            <a href="/#screenshots">Screenshots</a>
+            <a href="/#articles">Articles</a>
+            <a href="/#support">Support</a>
+            <a href="/privacy">Privacy</a>
         </div>
+        <div class="nav-links">
+            <a href="https://github.com/WatchTubeTeam/"><i class="fa-brands fa-github"></i></a>
+            <a href="https://discord.gg/6aJUwDQz5n"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://apps.apple.com/gb/app/watchtube/id1599884909"><i
+                    class="fa-brands fa-app-store-ios"></i></a>
+        </div>
+    </div>
+    <div class="header">
+        <span class="title">Privacy</span>
+    </div>
+    <div class="yes">
+        <span class="bold">WatchTube is a privacy-respecting application.</span>
+        <br />
+        No data is sent off to external servers of
+        any kind. Any user data and gathered user activities are stored on-device and are processed on-device to
+        provide a good experience whilst keeping your data private and safe.
+        <br />
+        <br />
+        Our servers are used to answer your queries, such as searching and getting metadata. None of this traffic is
+        identifiable to you specifically and our servers do not log any data linked to you. Servers will generate logs
+        containing debugging information about traffic but won't contain personally-identifying information or similar.
+    </div>
+</body>
 
-        <br /> <br />   
-
-        <footer class="text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<p style="color: #af9797;">Website made with ❤️ by <a href="https://callmeecho.dev" style="text-decoration: none; color: #af9797;">CallMeEcho</a>, <a href="https://112cxyz.github.io" style="text-decoration: none; color: #af9797;">112c</a> and <a href="https://hmuy.ml" style="text-decoration: none; color: #af9797;">hmuy</a></p>
-					</div>
-				</div>
-			</div>
-		</footer>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-      </body>
 </html>

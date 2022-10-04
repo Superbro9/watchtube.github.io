@@ -1,0 +1,264 @@
+:root {
+    --background: #212121;
+    --background-2: #343434;
+    --foreground: #fff;
+    --accent: #f74d4d;
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.nav {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    background: var(--background-2);
+}
+
+.nav img {
+    width: 50px;
+    border-radius: 15px;
+}
+
+.nav .nav-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav .nav-links a {
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.nav .nav-links a:hover {
+    color: var(--accent);
+}
+
+.nav .nav-shortcuts {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.nav .nav-shortcuts a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.nav .nav-shortcuts a:last-of-type {
+    margin-right: 0;
+}
+
+.nav .nav-shortcuts a:hover {
+    color: var(--accent);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.header .title {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 30px 0;
+}
+
+.header .slogan {
+    margin: 10px 0;
+}
+
+.header .download {
+    background: var(--accent);
+    color: var(--foreground);
+    padding: 10px 30px;
+    border-radius: 9999px;
+    text-decoration: none;
+    margin: 20px 0;
+}
+
+.carousel-container .carousel {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.carousel-container .carousel .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+}
+
+.carousel-container .carousel .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.carousel-container .carousel .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    margin: 0 20px;
+    transition: opacity 200ms;
+}
+
+.carousel-container .carousel .button:active {
+    opacity: 0.5;
+}
+
+.screenshots, .articles {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.carousel-container .preview {
+    display: flex;
+    margin-top: 20px;
+}
+
+.carousel-container .preview .item {
+    height: 100px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: transparent 2px solid;
+    cursor: pointer;
+}
+
+.carousel-container .preview .item.active {
+    border: var(--accent) 2px solid;
+}
+
+.carousel-container .preview img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.carousel-container .carousel .item .text {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.carousel-container .carousel .item .text::before {
+    content: "\"";
+}
+
+.carousel-container .carousel .item .text::after {
+    content: "\"";
+}
+
+.carousel-container .carousel .item .author {
+    font-style: italic;
+    color: #aaaaaa;
+}
+
+.carousel-container.articles .carousel {
+    max-width: 600px;
+}
+
+.carousel-container.articles .carousel .review {
+    width: 60%;
+    cursor: pointer;
+}
+
+#support {
+    text-align: center;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+    gap: 10px;
+}
+
+.faq .item {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px 20px;
+    background: var(--background-2);
+    border-radius: 10px;
+}
+
+.faq .item .info {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    user-select: none;
+    text-align: left;
+}
+
+.faq .item .info .collapse {
+    display: none;
+}
+
+.faq .item .info .expand {
+    display: block;
+}
+
+.faq .item.expanded .info .collapse {
+    display: block;
+}
+
+.faq .item.expanded .info .expand {
+    display: none;
+}
+
+.faq .item .more {
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 500ms ease;
+}
+
+.faq .item .more .section:first-of-type {
+    margin-top: 20px;
+}
+
+.faq .item .more .section:last-of-type {
+    margin-bottom: 20px;
+}
+
+.faq .item .more .section img {
+    border-radius: 15px;
+    width: 70%;
+}

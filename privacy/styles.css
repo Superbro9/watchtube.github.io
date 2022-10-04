@@ -1,0 +1,90 @@
+:root {
+    --background: #212121;
+    --background-2: #343434;
+    --foreground: #fff;
+    --accent: #f74d4d;
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.nav {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    background: var(--background-2);
+}
+
+.nav img {
+    width: 50px;
+    border-radius: 15px;
+}
+
+.nav .nav-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav .nav-links a {
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.nav .nav-links a:hover {
+    color: var(--accent);
+}
+
+.nav .nav-shortcuts {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.nav .nav-shortcuts a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.nav .nav-shortcuts a:last-of-type {
+    margin-right: 0;
+}
+
+.nav .nav-shortcuts a:hover {
+    color: var(--accent);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.header .title {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 30px 0;
+}
+
+.header .slogan {
+    margin: 10px 0;
+}
+
+.yes {
+    margin: auto;
+    width: 90%;
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+.bold {
+    font-weight: 700;
+    font-size: 20px;
+}
