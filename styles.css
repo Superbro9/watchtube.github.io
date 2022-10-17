@@ -293,7 +293,7 @@ body {
 }
 
 .nav .hamburger {
-  height: 20px;
+  font-size: 18px;
   margin-left: 20px;
   fill: white;
   cursor: pointer;
