@@ -104,6 +104,10 @@ body {
   line-height: 1.5em;
 }
 
+.header, .yes {
+    text-align: center;
+}
+
 .bold {
   font-weight: 700;
   font-size: 20px;
