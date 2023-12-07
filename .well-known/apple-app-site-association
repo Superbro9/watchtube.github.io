@@ -2,7 +2,7 @@
   "applinks": {
       "details": [
            {
-             "appIDs": [ "N36Z4HYRU9.com.suuperbro.watchtube.watchkitapp.watchkitextension" ],
+             "appIDs": [ "N36Z4HYRU9.com.suuperbro.watchtube.watchkitapp" ],
              "components": [
                {
                   "/": "/flicktype/*",
